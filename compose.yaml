@@ -1,0 +1,6 @@
+services:
+  nerves:
+    build: .
+    volumes:
+      - .:/usr/src/blinker
+      
