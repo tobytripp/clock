@@ -1,6 +1,6 @@
-defmodule Blinker do
+defmodule Clock do
   @moduledoc """
-  Documentation for Blinker.
+  Documentation for Clock.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Blinker do
 
   ## Examples
 
-      iex> Blinker.hello
+      iex> Clock.hello
       :world
 
   """

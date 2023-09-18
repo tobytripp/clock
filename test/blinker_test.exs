@@ -1,8 +1,8 @@
-defmodule BlinkerTest do
+defmodule ClockTest do
   use ExUnit.Case
-  doctest Blinker
+  doctest Clock
 
   test "greets the world" do
-    assert Blinker.hello() == :world
+    assert Clock.hello() == :world
   end
 end

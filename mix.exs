@@ -1,7 +1,7 @@
-defmodule Blinker.MixProject do
+defmodule Clock.MixProject do
   use Mix.Project
 
-  @app :blinker
+  @app :clock
   @version "0.1.0"
   @all_targets [
     :rpi,
@@ -33,7 +33,7 @@ defmodule Blinker.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {Blinker.Application, []},
+      mod: {Clock.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -69,7 +69,11 @@ defmodule Blinker.MixProject do
       {:nerves_system_osd32mp1, "~> 0.10", runtime: false, targets: :osd32mp1},
       {:nerves_system_x86_64, "~> 1.19", runtime: false, targets: :x86_64},
       {:nerves_system_grisp2, "~> 0.3", runtime: false, targets: :grisp2},
-      {:nerves_system_mangopi_mq_pro, "~> 0.4", runtime: false, targets: :mangopi_mq_pro}
+      {:nerves_system_mangopi_mq_pro, "~> 0.4", runtime: false, targets: :mangopi_mq_pro},
+
+      {:tzdata, "~> 1.1"},
+      {:circuits_spi, "~> 0.1"},
+      {:circuits_gpio, "~> 0.4.0"}
     ]
   end
 

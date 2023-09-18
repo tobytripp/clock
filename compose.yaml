@@ -2,5 +2,9 @@ services:
   nerves:
     build: .
     volumes:
-      - .:/usr/src/blinker
-      
+      - .:/usr/src/clock
+      - .ssh:/root/.ssh
+      - asdf:/root/.asdf
+
+volumes:
+  asdf:

@@ -1,4 +1,4 @@
-# Blinker
+# Clock
 
 **TODO: Add description**
 

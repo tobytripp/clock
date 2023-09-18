@@ -1,5 +1,10 @@
 import Config
 
+config :clock,
+  adapter: Clock.Adapter.Target,
+  timezone: "US/Central",
+  spi: "spidev0.0"
+
 # Use Ringlogger as the logger backend and remove :console.
 # See https://hexdocs.pm/ring_logger/readme.html for more information on
 # configuring ring_logger.

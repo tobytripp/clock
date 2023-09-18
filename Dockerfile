@@ -42,13 +42,14 @@ RUN ./configure --enable-shared=no && \
     make && \
     make install
 
+ENV LANG=C.UTF-8
 RUN source ~/.bashrc && mix local.hex
 RUN source ~/.bashrc && mix local.rebar
-
 RUN source ~/.bashrc && mix archive.install hex nerves_bootstrap
 
 ENV MIX_TARGET=rpi0
-WORKDIR /usr/src/blinker
+
+WORKDIR /usr/src/
 
 COPY . .
 CMD ["bash"]
